@@ -1,0 +1,60 @@
+@import url("/css/header.css");
+@import url("/css/footer.css");
+@import url("/css/styles.css");
+
+p {
+    color: white;
+    z-index: 1;
+    font-weight: bolder;
+}
+
+#blogContainer {
+    position: relative; /* Sett posisjonen til relativ for å legge til pseudoelementet */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#blogContainer::before {
+    content: ''; /* Legg til innhold for pseudoelementet */
+    position: absolute; /* Sett posisjonen til absolutt for å dekke hele elementet */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Legg til en bakgrunnsfarge med gjennomsiktighet for å gjøre bakgrunnen mørkere */
+}
+
+
+#blogHeader {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 50px;
+}
+
+
+
+#blogContent {
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: justify; 
+    margin-top: 60px;
+}
+
+#blogContent p {
+    color: white;
+    font-size: larger;
+    margin-bottom: 2.5em; 
+    line-height: 1.5em;
+}
+
+#author {
+    font-style: italic; 
+    font-size: 0.8em; 
+    margin-top: 2em;
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: justify; 
+}
+

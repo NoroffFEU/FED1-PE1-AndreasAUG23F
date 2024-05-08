@@ -1,0 +1,33 @@
+
+.footer-img {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 50px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.footer-navbar a {
+    position: relative;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2.2em;
+    line-height: 100px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+
+.footer-navbar a:hover {
+    font-size: 2.4em; 
+    font-weight: bolder;
+}

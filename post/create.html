@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edit</title>
-    <link rel="stylesheet" href="/css/edit.css">
+    <title>create</title>
+    <link rel="stylesheet" href="/css/create.css">
+    <script src="/js/pages/create.js" type="module" defer></script>
 </head>
 <header>
         <div class="navbar">
@@ -21,15 +22,15 @@
 <main>
     <form id="blogForm">
         <label for="url">URL:</label>
-        <input type="url" id="url" name="url" required>
+        <input type="text" id="url" name="image" required>
 
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
 
         <label for="content">TEXT:</label>
-        <textarea id="content" name="content" rows="8" required></textarea>
+        <textarea id="content" name="text" rows="8" required></textarea>
 
-        <button type="submit">SUBMIT</button>
+        <button id="submit"type="submit">SUBMIT</button>
     </form>
 </main>
 
