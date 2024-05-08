@@ -2,59 +2,59 @@
 @import url("/css/footer.css");
 @import url("/css/styles.css");
 
-p {
-    color: white;
-    z-index: 1;
-    font-weight: bolder;
+
+
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+
 }
 
-#blogContainer {
-    position: relative; /* Sett posisjonen til relativ for å legge til pseudoelementet */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#blogContainer::before {
-    content: ''; /* Legg til innhold for pseudoelementet */
-    position: absolute; /* Sett posisjonen til absolutt for å dekke hele elementet */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Legg til en bakgrunnsfarge med gjennomsiktighet for å gjøre bakgrunnen mørkere */
-}
 
 
 #blogHeader {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+}
+
+#blogHeader h1 {
+    margin-top: 80px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#author, #date {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 20px;
+
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.7em;
+
 }
 
 
 
-#blogContent {
-    width: 80%; 
-    margin: 0 auto; 
-    text-align: justify; 
-    margin-top: 60px;
+#blogImage {
+    width: 100%;
+    height: auto;
 }
 
-#blogContent p {
-    color: white;
-    font-size: larger;
-    margin-bottom: 2.5em; 
-    line-height: 1.5em;
+#blogImage img {
+    width: 100%;
+    height: auto;
+    filter: brightness(10%);
+    filter: blur(60px);
 }
-
-#author {
-    font-style: italic; 
-    font-size: 0.8em; 
-    margin-top: 2em;
-    width: 80%; 
-    margin: 0 auto; 
-    text-align: justify; 
-}
-

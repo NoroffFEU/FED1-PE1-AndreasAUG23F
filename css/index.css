@@ -19,12 +19,12 @@ main {
   margin-left: 50px;
 }
 
-.intro-header {
-  font-size: 2.5em;
+.intro-header h1 {
+  font-size: 4.5em;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
-}
+} 
 
 .intro-header2 {
   font-size: 2em;
@@ -33,7 +33,7 @@ main {
 }
 
 .intro-text {
-  width: 70%;
+  width: 90%;
   font-size: 1.5em;
   text-align: left;
   margin-bottom: 40px;
