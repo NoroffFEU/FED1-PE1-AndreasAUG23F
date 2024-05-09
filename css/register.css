@@ -11,7 +11,7 @@ main {
 }
 
 
-.loginHeader {
+.registerHeader {
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -20,7 +20,6 @@ main {
 
 
 form {
-
     width: 300px; /* Sett ønsket bredde */
     margin: 0 auto; /* Midtstill formen horisontalt */
     padding: 50px; /* Øk padding for å gi litt mer plass */
@@ -40,7 +39,7 @@ label {
 }
 
 input[type="password"],
-input[type="text"],
+input[type="username"],
 input[type="email"]
 textarea {
     width: 100%;
@@ -50,6 +49,16 @@ textarea {
     border-radius: 30px;
     box-sizing: border-box;
 }
+
+#registerForm input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
 
 button {
     display: flex;
