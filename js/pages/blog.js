@@ -33,7 +33,7 @@
     const setBlogBackground = (imageUrl) => {
         const blogContainer = document.getElementById('blogContainer');
         blogContainer.style.backgroundImage = `url(${imageUrl})`;
-        blogContainer.style.backdropFilter = 'blur(5px)';
+        blogContainer.style.backdropFilter = 'background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),blur(5px)';
 
     };
     

@@ -5,12 +5,12 @@
 
 
 
-main p {
+
+main p{
     font-size: 1.2em;
     line-height: 1.6em;
-
+    background-image: url(/images/overlay.png);
 }
-
 
 
 #blogHeader {
@@ -55,6 +55,6 @@ main p {
 #blogImage img {
     width: 100%;
     height: auto;
-    filter: brightness(10%);
-    filter: blur(60px);
-}
+    
+} 
+
