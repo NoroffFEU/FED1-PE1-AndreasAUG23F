@@ -1,4 +1,4 @@
-
+/* 
 import { doFetch } from "../components/fetch.js";
 
 
@@ -8,78 +8,49 @@ const runPage = async () => {
     "https://v2.api.noroff.dev/blog/posts/Swagdaddy"
     );
     console.log("blogsInfo", blogs);
-    /* carousel(blogs);  */
     blogGrid(blogs);
-  };
-  
-  
-  
-/*     const carousel = (blogs) => {
-    let slideIndex = 0;
-    showSlides();
-    
-
-    function showSlides() {
-        const slidesContainer = document.getElementById("slideshow-container");
-        
-        
-        const prevButton = document.createElement("button");
-        prevButton.classList.add("prev");
-        prevButton.textContent = "❮";
-        prevButton.onclick = () => plusSlides(-1);
-
-        const nextButton = document.createElement("button");
-        nextButton.classList.add("next");
-        nextButton.textContent = "❯";
-        nextButton.onclick = () => plusSlides(1);
-
-        const readMoreButton = document.createElement("a");
-        readMoreButton.textContent = "Read More";
-        readMoreButton.classList.add("read-more-a", "carouselButton");
+    populateCarousel(blogs);
+};
 
 
-        blogs.slice(-3).forEach((blog, index) => {
-            const slide = document.createElement("div");
-            slide.classList.add("mySlides");
-
-            const image = document.createElement("img");
-            image.src = blog.media.url;
-            image.alt = blog.title;
-
-            slide.appendChild(image,readMoreButton);
-            slidesContainer.appendChild(slide);
-        });
 
 
-        slidesContainer.append(prevButton, nextButton,);
+function populateCarousel(posts) {
+    const carouselContainer = document.querySelector('.carousel-container');
+    const slides = carouselContainer.querySelectorAll('.carousel-slide');
+    console.log(posts);
 
-        const slides = document.getElementsByClassName("mySlides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-    function plusSlides(n) {
-        showSlides((slideIndex += n));
-    }
-
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 37) {
-            plusSlides(-1);
-        } else if (event.keyCode === 39) {
-            plusSlides(1);
-        }
+    posts.slice(0, slides.length).forEach((post, index) => {
+        const slide = slides[index];
+        slide.innerHTML = `
+            <img class="post-media" src="${post.media.url}" alt="${post.media.alt}">
+            <h2 class="post-title">${post.title}</h2>
+            <a href="post/index.html?id=${post.id}&title=${encodeURIComponent(post.title)}&body=${encodeURIComponent(post.body)}&imageUrl=${encodeURIComponent(post.media.url)}&created=${encodeURIComponent(post.created)}&updated=${encodeURIComponent(post.updated)}&authorName=${encodeURIComponent(post.author.name)}" class="read-more-button">Read More</a>
+        `;
     });
-};  
- */
 
+    slides[0].style.display = 'block';
 
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    let currentIndex = 0;
+
+    prevButton.addEventListener('click', showPrevSlide);
+    nextButton.addEventListener('click', showNextSlide);
+
+    function showPrevSlide() {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        slides[currentIndex].style.display = 'block';
+    }
+
+    function showNextSlide() {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+    }
+}
 
 
 
@@ -142,127 +113,102 @@ runPage();
 
 
 
-
-/* const runPage = async () => {
-  let blogs = await doFetch(
-      "GET",
-      "https://v2.api.noroff.dev/blog/posts/Swagdaddy"
-  );
-  console.log("blogsInfo", blogs);
-  carousel(blogs);
-  blogGrid(blogs);
-};
+ */
 
 
+import { carouselFunction } from "../components/carousel.mjs";
+import { doFetch } from "../components/fetch.js";
 
+document.addEventListener('DOMContentLoaded', async () => {
+    const blogs = await doFetch(
+        "GET",
+        "https://v2.api.noroff.dev/blog/posts/Swagdaddy"
+    );
+    console.log("blogsInfo", blogs);
+    blogGrid(blogs);
+    blogCarousel(blogs);
+});
 
+const blogCarousel = (blogs) => {
 
-const carousel = (blogs) => {
-  let slideIndex = 0;
-  const slidesContainer = document.getElementById("slideshow-container");
+    let latestPosts = blogs.slice(0, 3);
 
-  const prevButton = document.createElement("a");
-  prevButton.classList.add("prev");
-  prevButton.textContent = "❮";
-  prevButton.onclick = () => plusSlides(-1);
+    latestPosts.forEach (blog => {
+        let container = document.getElementById('carouselContainer');
 
-  const nextButton = document.createElement("a");
-  nextButton.classList.add("next");
-  nextButton.textContent = "❯";
-  nextButton.onclick = () => plusSlides(1);
+        let blogContainer = document.createElement('div');
+        blogContainer.className=('blogCarouselContainer visible');
+        
 
-  const readMoreButton = document.createElement("button");
-  readMoreButton.textContent = "Read More";
-  readMoreButton.classList.add("read-more-a", "carouselButton");
-  readMoreButton.addEventListener('click', () => {
-      const currentSlideIndex = (slideIndex % blogs.length) + blogs.length;
-      window.location.href = `/post/index.html?${blogs[currentSlideIndex % blogs.length].id}`;
-  });
+        let image = document.createElement('img');
+        image.src = blog.media.url;
+        image.alt = blog.media.alt;
 
-  blogs.slice(-3).forEach((blog, index) => {
-      const slide = document.createElement("div");
-      slide.classList.add("mySlides");
+        let textBox = document.createElement('div');
+        textBox.classList.add('carousel-text');
 
-      const image = document.createElement("img");
-      image.src = blog.media.url;
-      image.alt = blog.title;
+        let title = document.createElement('h2');
+        title.textContent = blog.title;
 
-      slide.appendChild(image);
-      slidesContainer.appendChild(slide);
-  });
+        let button = document.createElement('button');
+        button.classList.add('carouselCta');
+        button.textContent = 'Read More';
+        button.onclick = () => {
+            window.location.href = `/post/index.html?`+ blog.id;
+        }
 
-  slidesContainer.append(prevButton, nextButton, readMoreButton);
+        container.appendChild(blogContainer);
+        blogContainer.append(image, textBox);
+        textBox.append(title, button);
+    })
 
-  const slides = document.getElementsByClassName("mySlides");
-  for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) {
-      slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-
-  function plusSlides(n) {
-      showSlides((slideIndex += n));
-  }
-
-  document.addEventListener("keydown", function (event) {
-      if (event.keyCode === 37) {
-          plusSlides(-1);
-      } else if (event.keyCode === 39) {
-          plusSlides(1);
-      }
-  });
-};
-
-const blogGrid = (blogs) => {
-  let section = document.getElementById('blogSection');
-
-  blogs.forEach(blog => {
-      let container = document.createElement('div');
-      container.classList.add('blogContainer');
-      container.id = 'blogContainer';
-
-      let imageContainer = document.createElement('div');
-      imageContainer.classList.add('blog-image');
-
-      let image = document.createElement('img');
-      image.src = blog.media.url;
-      image.alt = blog.media.alt;
-
-      let titleContainer = document.createElement('div');
-      titleContainer.classList.add('blog-title');
-
-      let title = document.createElement('h2');
-      title.classList.add('blogCardTitle');
-      title.textContent = blog.title;
-
-      let buttonContainer = document.createElement('div');
-      buttonContainer.classList.add('readMoreButton');
-
-      let button = document.createElement('button');
-      button.textContent = 'Read More';
-      button.classList.add('read-more-a');
-
-      button.addEventListener('click', () => {
-          window.location.href = `/post/index.html?` + blog.id;
-      });
-
-      buttonContainer.appendChild(button);
-      titleContainer.appendChild(title);
-      imageContainer.appendChild(image);
-
-      container.appendChild(imageContainer);
-      container.appendChild(titleContainer);
-      container.appendChild(buttonContainer);
-
-      section.appendChild(container);
-  });
-
-  return section;
+    carouselFunction();
 }
 
-runPage();
- */
+
+const blogGrid = (blogs) => {
+    let section = document.getElementById('blogSection');
+
+    blogs.forEach(blog => {
+        let container = document.createElement('div');
+        container.classList.add('blogContainer');
+        container.id = 'blogContainer';
+
+        let imageContainer = document.createElement('div');
+        imageContainer.classList.add('blog-image');
+
+        let image = document.createElement('img');
+        image.src = blog.media.url;
+        image.alt = blog.media.alt;
+
+        let titleContainer = document.createElement('div');
+        titleContainer.classList.add('blog-title');
+
+        let title = document.createElement('h2');
+        title.classList.add('blogCardTitle');
+        title.textContent = blog.title;
+
+        let buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('readMoreButton');
+
+        let button = document.createElement('button');
+        button.textContent = 'Read More';
+        button.classList.add('read-more-a');
+
+        button.addEventListener('click', () => {
+            window.location.href = `/post/index.html?`+ blog.id;
+        });
+
+        buttonContainer.appendChild(button);
+        titleContainer.appendChild(title);
+        imageContainer.appendChild(image);
+
+        container.appendChild(imageContainer);
+        container.appendChild(titleContainer);
+        container.appendChild(buttonContainer);
+
+        section.appendChild(container);
+    });
+
+    return section;
+}

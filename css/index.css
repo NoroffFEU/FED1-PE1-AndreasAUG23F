@@ -45,68 +45,58 @@ main {
 
 
 
+/* CAROUSEL SECTION START*/
 
-/* SLIDESHOW SECTION START*/
-
-
-#slideshow-container {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  width: 1000px; 
-  height: 350px; 
-}
-
-
-.mySlides {
+.hidden {
   display: none;
 }
 
-.mySlides img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+.visible {
+  display: block;
+}
+
+.blogCarouselContainer img{
+  width: 1000px;
+  height: 500px;
+  max-width: 100%;
+}
+
+.blogCarouselContainer img:hover {
+  filter:opacity(0.5);
+  transition: all 0.3s ease-in-out;
+  width: 1100px;
+  height: 550px;
+
+}
+
+.blogCarouselContainer {
+  position: relative; /* Gjør posisjonering relativt til foreldrenelementet */
+}
+
+.blogCarouselContainer h2 {
+  position: absolute; 
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px; 
+  font-size: 3.5em; 
+  width: 110%;
+  font-weight: bold; 
+  text-align: center; 
+  z-index: 1; /* Plasser tittelen foran bildet */
 }
 
 
-.prev, .next {
-  cursor: pointer;
+
+
+.blogCarouselContainer .carouselCta {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px; /* Øker bredden på pilknappene til 40px */
-  height: 40px; /* Øker høyden på pilknappene til 40px */
-  font-size: 30px; /* Øker fontstørrelsen på pilknappene */
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Legger til en mørk oval bakgrunn */
-  border-radius: 50%; /* Gjør pilknappene ovale */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
-  transition: background-color 0.3s ease; /* Legger til en overgangseffekt på bakgrunnsfargen */
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Endrer bakgrunnsfargen når pilene hoveres over */
-}
-
-.prev {
-  left: 10px; /* Plasserer pilen til venstre 10px fra venstre side av karusellen */
-}
-
-.next {
-  right: 10px; /* Plasserer pilen til høyre 10px fra høyre side av karusellen */
-}
-
-.carouselButton {
-  background: red;
-  color: red;
-  z-index: 5;
-}
-
-/* SLIDESHOW SECTION END*/
 
 
 
@@ -115,9 +105,10 @@ main {
 
 
 
+  
 
 
-
+/* CAROUSEL SECTION END */
 
 
 
@@ -135,15 +126,15 @@ main {
   margin-top: 50px;
 }
 
-/* Blog Container */
+
 .blogContainer {
-  flex: 0 1 25%; /* Juster bredden på hvert blogginnlegg for å få 4 på hver linje */
+  flex: 0 1 25%; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-}
+} 
 
 /* Blog Image */
 .blog-image {
@@ -190,3 +181,5 @@ main {
 }
 
 /* BLOG SECTION END*/
+
+
