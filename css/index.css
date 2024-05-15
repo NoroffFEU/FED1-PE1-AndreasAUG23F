@@ -55,22 +55,42 @@ main {
   display: block;
 }
 
+.slide-numbers{
+  text-align: center;
+  position:absolute;
+  bottom: -510px;
+  left:48%;
+
+}
+.dot{
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: rgba(204,204,204, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+} 
+
+.dot:hover, .active{
+  background-color: rgb(204,204,204);
+  height: 12px;
+  width: 12px;
+}
+.dot:hover{
+  box-shadow: 0 0 5px #fff;
+}
+
 .blogCarouselContainer img{
   width: 1000px;
   height: 500px;
   max-width: 100%;
+  border-radius: 25px;
 }
 
-.blogCarouselContainer img:hover {
-  filter:opacity(0.5);
-  transition: all 0.3s ease-in-out;
-  width: 1100px;
-  height: 550px;
-
-}
 
 .blogCarouselContainer {
-  position: relative; /* Gjør posisjonering relativt til foreldrenelementet */
+  position: relative; 
 }
 
 .blogCarouselContainer h2 {
@@ -83,19 +103,25 @@ main {
   width: 110%;
   font-weight: bold; 
   text-align: center; 
-  z-index: 1; /* Plasser tittelen foran bildet */
+  z-index: 1; 
 }
 
 
+.arrowButtons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: -250px;
 
+}
 
 .blogCarouselContainer .carouselCta {
   position: absolute;
-  bottom: 30px;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-}
+} 
 
 
 
@@ -103,9 +129,6 @@ main {
 
 
 
-
-
-  
 
 
 /* CAROUSEL SECTION END */
@@ -146,6 +169,7 @@ main {
 .blog-image img {
   width: 100%;
   height: 100%;
+  border-radius: 25px;
 }
 
 /* Blog Title */

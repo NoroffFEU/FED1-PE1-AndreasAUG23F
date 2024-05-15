@@ -9,7 +9,7 @@
 main p{
     font-size: 1.2em;
     line-height: 1.6em;
-    background-image: url(/images/overlay.png);
+    /* background-image: url(/images/overlay.png); */
 }
 
 
@@ -24,6 +24,7 @@ main p{
     margin-top: 80px;
     font-size: 3em;
     font-weight: bold;
+    z-index: 2;
 }
 
 #author, #date {

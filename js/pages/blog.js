@@ -32,8 +32,9 @@
     
     const setBlogBackground = (imageUrl) => {
         const blogContainer = document.getElementById('blogContainer');
-        blogContainer.style.backgroundImage = `url(${imageUrl})`;
-        blogContainer.style.backdropFilter = 'background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),blur(5px)';
+        blogContainer.style.background = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url(${imageUrl}) center center no-repeat`;
+        blogContainer.style.backgroundSize = 'cover';
+
 
     };
     

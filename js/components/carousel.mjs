@@ -1,10 +1,10 @@
 export const carouselFunction = () => {
 
-/*     let prevBtn = document.querySelector('.prev-button');
-    let nextBtn = document.querySelector('.next-button'); */
 
     let prevBtn2 = document.querySelector('.prev-button2');
     let nextBtn2 = document.querySelector('.next-button2');
+
+    let dots = document.querySelectorAll('.dot');
 
     let blogs = document.querySelectorAll('.blogCarouselContainer')
 
@@ -19,6 +19,14 @@ export const carouselFunction = () => {
         }
         blogs[blogPosition].classList.remove('hidden');
         blogs[blogPosition].classList.add('visible');
+        
+        for (let dot of dots) {
+            dot.className = dot.className.replace(" active", "");
+        }
+        dots[blogPosition].classList.add('active');
+
+
+
     }
 
 
@@ -46,6 +54,11 @@ export const carouselFunction = () => {
 
     nextBtn2.addEventListener('click', nextImage);
     prevBtn2.addEventListener('click', prevImage);
-    /* nextBtn.addEventListener('click', nextImage);
-    prevBtn.addEventListener('click', prevImage); */
+
+    dots.forEach((dot, dotPosition) => {
+        dot.addEventListener("click", () => {
+          blogPosition = dotPosition
+          updatePosition(dotPosition)
+        })
+      })
 }
