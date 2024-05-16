@@ -1,6 +1,8 @@
 
     import { doFetch } from "../components/fetch.js";
 
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     const runPage = async () => {
         makePage();
     };
@@ -18,10 +20,19 @@
     
         let author = document.getElementById("author");
         author.innerText = blog.author.name;
-    
+
+
+        let postedBy = document.createElement("p");
+        postedBy.innerText = "Posted by: ";
+        postedBy.classList.add("postedBy");
+        author.parentNode.insertBefore(postedBy, author);
+        
+        let formattedDate = new Date(blog.created)
         let date = document.getElementById("updated");
+        date.classList.add("updated");
         date.innerText = blog.updated;
-    
+        date.innerText = `${formattedDate.getDate()} ${months[formattedDate.getMonth()]} ${formattedDate.getFullYear()}`;
+        
         let content = document.getElementById("body");
         content.innerHTML = blog.body;
     
@@ -32,7 +43,7 @@
     
     const setBlogBackground = (imageUrl) => {
         const blogContainer = document.getElementById('blogContainer');
-        blogContainer.style.background = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url(${imageUrl}) center center no-repeat`;
+        blogContainer.style.background = `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(${imageUrl}) center center no-repeat`;
         blogContainer.style.backgroundSize = 'cover';
 
 

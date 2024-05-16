@@ -104,6 +104,8 @@ main {
   font-weight: bold; 
   text-align: center; 
   z-index: 1; 
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.301);
 }
 
 
@@ -207,3 +209,183 @@ main {
 /* BLOG SECTION END*/
 
 
+/* media queries */
+
+@media screen and (max-width: 1091px) {
+  .blogContainer {
+    flex: 0 1 40%;
+  }
+
+  .blog-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  .blogCardTitle {
+    font-size: 1.2em;
+  }
+
+  .read-more-a {
+    font-size: 0.8em;
+  }
+
+  .intro-header h1 {
+    font-size: 3.5em;
+  }
+
+  .intro-text {
+    font-size: 1.2em;
+  }
+
+  .intro-header2 {
+    font-size: 1.5em;
+  }
+
+  .slide-numbers{
+    bottom: -450px;
+  }
+
+  .blogCarouselContainer img{
+    width: 800px;
+    height: 400px;
+  }
+
+  .blogCarouselContainer h2 {
+    font-size: 3em;
+  }
+
+  .arrowButtons {
+    top: -200px;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    display: none; /* Skjuler den vanlige navbar'en */
+}
+
+.hamburger,
+.menu {
+    display: block; /* Viser hamburgerikonet og menyen */
+}
+
+  .blogContainer {
+    flex: 0 1 80%;
+  }
+
+  .blog-image {
+    width: 250px;
+    height: 150px;
+  }
+
+  .blogCardTitle {
+    font-size: 1em;
+  }
+
+  .read-more-a {
+    font-size: 0.6em;
+  }
+
+  .intro-header h1 {
+    font-size: 3em;
+  }
+
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .intro-header2 {
+    font-size: 1.2em;
+  }
+
+  .slide-numbers{
+    bottom: -300px;
+  }
+
+  .blogCarouselContainer img{
+    width: 500px;
+    height: 300px;
+  }
+
+  .blogCarouselContainer h2 {
+    font-size: 2.5em;
+  }
+
+  .arrowButtons {
+    top: -150px;
+  }
+
+  .allPosts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+
+  .blog-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogContainer {
+    flex: 0 1 100%;
+  }
+
+  .blog-image {
+    width: 200px;
+    height: 120px;
+  }
+
+  .blogCardTitle {
+    font-size: 0.8em;
+  }
+
+  .read-more-a {
+    font-size: 0.5em;
+  }
+
+  .intro-header h1 {
+    font-size: 2.5em;
+  }
+
+  .intro-text {
+    font-size: 0.8em;
+  }
+
+  .intro-header2 {
+    font-size: 1em;
+  }
+
+  .slide-numbers{
+    bottom: -200px;
+  }
+
+  .blogCarouselContainer img{
+    width: 400px;
+    height: 200px;
+  }
+
+  .blogCarouselContainer h2 {
+    font-size: 2em;
+  }
+
+  .arrowButtons {
+    top: -100px;
+  }
+
+  .allPosts {
+    width: 80%;
+  }
+
+  .blog-section {
+    margin-top: 10px;
+  }
+}
