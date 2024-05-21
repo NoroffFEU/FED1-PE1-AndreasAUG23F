@@ -28,6 +28,7 @@
         author.parentNode.insertBefore(postedBy, author);
         
         let formattedDate = new Date(blog.created)
+
         let date = document.getElementById("updated");
         date.classList.add("updated");
         date.innerText = blog.updated;
@@ -35,9 +36,15 @@
         
         let content = document.getElementById("body");
         content.innerHTML = blog.body;
+        
     
         
         setBlogBackground(blog.media.url);
+
+        const elements = document.querySelectorAll("#blogContainer div");
+        elements.forEach(element => {
+            element.classList.add("visible");
+        });
     };
     
     

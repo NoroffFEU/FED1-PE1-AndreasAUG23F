@@ -117,16 +117,21 @@ runPage();
 
 
 import { carouselFunction } from "../components/carousel.mjs";
-import { doFetch } from "../components/fetch.js";
+import { doFetch } from "../components/fetch.mjs";
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     const blogs = await doFetch(
         "GET",
         "https://v2.api.noroff.dev/blog/posts/Swagdaddy"
-    );
-    console.log("blogsInfo", blogs);
-    blogGrid(blogs);
-    blogCarousel(blogs);
+        );
+        console.log("blogsInfo", blogs);
+        blogGrid(blogs);
+        blogCarousel(blogs);
 });
 
 const blogCarousel = (blogs) => {
