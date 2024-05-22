@@ -1,6 +1,7 @@
 
-
 import { doFetch } from "../components/fetch.mjs";
+import { handleLoginHeader } from "../components/header.mjs";
+handleLoginHeader();
 
 const loginForm = document.querySelector('#loginForm');
 loginForm.addEventListener('submit', async (event) => {
