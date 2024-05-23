@@ -5,9 +5,9 @@
 main {
   background-image: url("/images/register.png");
   background-size: cover;
-  background-position: center; /* Senter bildet */
-  height: 100vh;
-  width: 100%; /* Sett bredden til 100% av foreldreelementet */
+  background-position: center;
+  height: 80vh;
+  width: 100%;
 }
 
 .registerHeader {
@@ -18,9 +18,9 @@ main {
 }
 
 form {
-  width: 300px; /* Sett ønsket bredde */
-  margin: 0 auto; /* Midtstill formen horisontalt */
-  padding: 50px; /* Øk padding for å gi litt mer plass */
+  width: 300px;
+  margin: 0 auto;
+  padding: 50px;
   border-radius: 5px;
 }
 

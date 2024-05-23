@@ -49,6 +49,9 @@ const makePage = async () => {
     months[formattedDate.getMonth()]
   } ${formattedDate.getFullYear()}`;
 
+  let imageBanner = document.getElementById("imageBanner");
+  imageBanner.src = blog.media.url;
+
   let content = document.getElementById("body");
   content.innerHTML = blog.body;
 
