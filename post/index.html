@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>blog</title>
-    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/blog.css" />
     <script src="/js/pages/blog.js" type="module" defer></script>
-</head>
+  </head>
 
-<header>
+  <header>
     <div class="navbar">
-        <li><a href="/index.html" class="header-a">HOME</a></li>
-        <li><a  id="login" class="header-a">LOGIN</a></li>
-        <li><a  id="register" class="header-a">REGISTER</a></li>
+      <li><a href="/index.html" class="header-a">HOME</a></li>
+      <li><a id="login" class="header-a">LOGIN</a></li>
+      <li><a id="register" class="header-a">REGISTER</a></li>
     </div>
     <div class="header-img">
-        <img src="/images/peaksHeader.png" alt="image of a mountain">
+      <img src="/images/peaksHeader.png" alt="image of a mountain" />
     </div>
-</header>
+  </header>
 
+  <body>
+    <main>
+      <div id="blogContainer">
+        <div>
+          <h1 id="blogHeader"></h1>
+        </div>
+        <div>
+          <h2 id="author"></h2>
+        </div>
+        <div>
+          <h2 id="updated"></h2>
+        </div>
+        <div>
+          <p id="body"></p>
+        </div>
+        <div>
+          <button id="editBtn">EDIT POST</button>
+        </div>
+      </div>
+    </main>
 
-<body>
-
-<main>
-        <div id="blogContainer">
-            <div>
-                <h1 id="blogHeader"></h1>
-            </div>
-            <div>
-                <h2 id="author"></h2>
-            </div>
-            <div>
-                <h2 id="updated"></h2>
-            </div>
-            <div>
-                <p id="body"></p>
-            </div>
-            <div>
-                <button id="editBtn">EDIT</button>
-            </div>
-        </div> 
-</main>
-
-
-
-<footer>
-    <div class="footer-img">
+    <footer>
+      <div class="footer-img">
         <a href="/index.html">
-            <img src="/images/logo.png" alt="logo">
+          <img src="/images/logo.png" alt="logo" />
         </a>
-    </div>
-    <div class="footer-navbar">
+      </div>
+      <div class="footer-navbar">
         <li><a href="/index.html" class="footer-a">HOME</a></li>
         <li><a href="/account/login.html" class="footer-a">LOGIN</a></li>
         <li><a href="/account/register.html" class="footer-a">REGISTER</a></li>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>

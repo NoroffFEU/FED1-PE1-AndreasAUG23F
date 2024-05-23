@@ -2,45 +2,134 @@
 @import url("/css/footer.css");
 @import url("/css/styles.css");
 
-
-
-
-
 #body p {
-    margin-bottom: 60px; /* Legger til litt mellomrom mellom avsnittene */
+  margin-bottom: 60px; /* Legger til litt mellomrom mellom avsnittene */
 }
-
 
 /* Ny styling for tekstelementene */
 #blogContainer {
-    text-align: center; /* Sentrerer alt tekstinnhold */
+  text-align: center; /* Sentrerer alt tekstinnhold */
 }
 
 #blogHeader {
-    font-size: 3em;
-    font-weight: bold;
+  font-size: 3em;
+  font-weight: bold;
 }
 
-#author, #updated {
-    font-size: 1.2em;
-    font-style: italic;
-    margin: 20px 0;
+#author,
+#updated {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.postedBy {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 19px 0;
+}
+
+#author #updated .postedBy {
+  display: flex;
+  justify-content: space-between;
 }
 
 #body {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 1.7em;
-    line-height: 1.9em;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.7em;
+  line-height: 1.9em;
 }
 
 #blogContainer div {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #blogContainer div.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button {
+  position: relative;
+  display: inline-flexbox;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #002cda;
+  color: white;
+  margin-left: 200px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #001f8f;
+}
+
+.visible {
+  display: flex;
+  justify-content: center;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1091px) {
+  #blogHeader {
+    font-size: 2.5em;
+  }
+
+  #body {
+    font-size: 1.5em;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #blogContainer div {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #blogHeader {
+    font-size: 2em;
+  }
+
+  #body {
+    font-size: 1.2em;
+  }
+
+  #author,
+  #updated {
+    font-size: 0.8em;
+  }
+
+  #blogContainer div {
+    font-size: 0.4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #blogHeader {
+    font-size: 1.5em;
+  }
+
+  #body {
+    font-size: 1em;
+  }
+
+  #author,
+  #updated {
+    font-size: 0.6em;
+  }
+
+  #blogContainer div {
+    font-size: 0.3em;
+  }
 }
