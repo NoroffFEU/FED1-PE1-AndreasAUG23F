@@ -68,3 +68,62 @@ button {
 button:hover {
   background-color: #0c2fe6;
 }
+
+/*media queries for screen sizes  768px, 425px, 375px, 320px*/
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 50%;
+  }
+
+  label {
+    font-size: 3.2vw;
+  }
+
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    padding: 5px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  form {
+    width: 50%;
+  }
+
+  label {
+    font-size: 3.2vw;
+  }
+
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    padding: 5px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form {
+    width: 50%;
+  }
+
+  label {
+    font-size: 3.2vw;
+  }
+
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    padding: 5px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  form {
+    width: 50%;
+  }
+}

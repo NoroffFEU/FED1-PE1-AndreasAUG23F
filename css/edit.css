@@ -43,3 +43,25 @@ button {
 button:hover {
   background-color: #1124f7;
 }
+
+/* write media queries for screen sizes 1091px, 768px, 425px, 375px, 320px */
+
+@media screen and (max-width: 1091px) {
+  main {
+    max-width: 500px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input[type="url"],
+  input[type="text"],
+  textarea {
+    padding: 5px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+}

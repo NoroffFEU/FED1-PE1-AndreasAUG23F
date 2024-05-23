@@ -166,12 +166,13 @@ main {
 
 /* Blog Image */
 .blog-image {
-  width: 350px; /* Endret bredden til 350px */
-  height: 240px; /* Endret høyden til 240px */
+  width: 350px;
+  height: 240px;
   margin-bottom: 20px;
 }
 
 .blog-image img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 25px;
@@ -212,215 +213,211 @@ main {
 /* BLOG SECTION END*/
 
 /* media queries */
-
-@media screen and (max-width: 1091px) {
-  .blogContainer {
-    flex: 0 1 40%;
+@media screen and (max-width: 1440px) {
+  .intro {
+    margin-left: 0;
   }
-
-  .blog-image {
-    width: 300px;
-    height: 200px;
-  }
-
-  .blogCardTitle {
-    font-size: 1.2em;
-  }
-
-  .read-more-a {
-    font-size: 0.8em;
-  }
-
-  .intro-header h1 {
-    font-size: 3.5em;
-  }
-
-  .intro-text {
-    font-size: 1.2em;
-  }
-
-  .intro-header2 {
-    font-size: 1.5em;
-  }
-
-  .slide-numbers {
-    bottom: 0;
-  }
-
   .blogCarouselContainer img {
-    width: 800px;
+    width: 1130px;
     height: 400px;
   }
-
   .blogCarouselContainer h2 {
     font-size: 3em;
   }
-
+  .blogCarouselContainer .carouselCta {
+    font-size: 1.8em;
+  }
   .arrowButtons {
     top: -200px;
   }
+
+  .posts-header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .posts-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    display: none; /* Skjuler den vanlige navbar'en */
+@media screen and (max-width: 1091px) {
+  .intro {
+    margin-left: 0;
   }
-
-  .hamburger,
-  .menu {
-    display: block; /* Viser hamburgerikonet og menyen */
-  }
-
-  .blogContainer {
-    flex: 0 1 80%;
-  }
-
-  .blog-image {
-    width: 250px;
-    height: 150px;
-  }
-
-  .blogCardTitle {
-    font-size: 1em;
-  }
-
-  .read-more-a {
-    font-size: 0.6em;
-  }
-
-  .intro-header h1 {
-    font-size: 3em;
-  }
-
-  .intro-text {
-    font-size: 1em;
-  }
-
-  .intro-header2 {
-    font-size: 1.2em;
-  }
-
-  .slide-numbers {
-    bottom: -300px;
-  }
-
   .blogCarouselContainer img {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 400px;
   }
-
   .blogCarouselContainer h2 {
     font-size: 2.5em;
   }
-
+  .blogCarouselContainer .carouselCta {
+    font-size: 1.5em;
+  }
+  .blogCarouselContainer {
+    position: relative;
+  }
   .arrowButtons {
     top: -150px;
   }
 
-  .allPosts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
+  .blogCarouselContainer img {
+    height: 300px;
+    max-width: 750px;
+    width: 550px;
   }
 
-  .blog-section {
-    margin-top: 20px;
+  .posts-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .posts-text {
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-header h1 {
+    font-size: 3.5em;
+  }
+  .intro-header2 {
+    font-size: 1.5em;
+  }
+  .intro-text {
+    font-size: 1.2em;
+  }
+  .blogCarouselContainer img {
+    height: 300px;
+    max-width: 750px;
+    width: 550px;
+  }
+  .blogCarouselContainer h2 {
+    font-size: 2em;
+  }
+  .blogCarouselContainer .carouselCta {
+    font-size: 1.2em;
+  }
+  .arrowButtons {
+    top: -150px;
+  }
+
+  .posts-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .posts-text {
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .blog-section {
+    margin-top: 40px;
+  }
+  .blogContainer {
+    flex: 0 1 50%;
+  }
+  .blog-image {
+    width: 100%;
+    height: 200px;
+  }
+  .blog-title {
+    margin-bottom: 5px;
+  }
+  .blogCardTitle {
+    font-size: 1.2em;
+  }
+  .read-more-a {
+    font-size: 0.9em;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .blogContainer {
-    flex: 0 1 100%;
-  }
-
-  .blog-image {
-    width: 200px;
-    height: 120px;
-  }
-
-  .blogCardTitle {
-    font-size: 0.8em;
-  }
-
-  .read-more-a {
-    font-size: 0.5em;
-  }
-
   .intro-header h1 {
     font-size: 2.5em;
   }
-
-  .intro-text {
-    font-size: 0.8em;
-  }
-
   .intro-header2 {
+    font-size: 1.2em;
+  }
+  .intro-text {
     font-size: 1em;
   }
-
-  .slide-numbers {
-    bottom: -200px;
-  }
-
   .blogCarouselContainer img {
-    width: 400px;
     height: 200px;
+    max-width: 500px;
+    width: 350px;
   }
-
   .blogCarouselContainer h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
-
+  .blogCarouselContainer .carouselCta {
+    font-size: 1em;
+  }
   .arrowButtons {
     top: -100px;
   }
 
-  .allPosts {
-    width: 80%;
+  .posts-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
-  .blog-section {
-    margin-top: 10px;
-  }
-
-  .blogCarouselContainer img {
-    width: 500px;
-    height: 200px;
-    max-width: 100%;
-    border-radius: 25px;
-  }
-
-  .blogCarouselContainer {
-    position: relative;
+  .posts-text {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
     justify-content: center;
   }
-
-  .blogCarouselContainer h2 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 1.5em;
-    width: 110%;
-    font-weight: bold;
-    text-align: center;
-    z-index: 1;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.301);
+  .blog-section {
+    margin-top: 40px;
   }
-
-  .slide-numbers {
-    text-align: center;
-    position: relative;
-    bottom: 85px;
+  .blogContainer {
+    flex: 0 1 100%;
   }
-  .dot {
-    cursor: pointer;
-    height: 5px;
-    width: 5px;
+  .blog-image {
+    width: 100%;
+    height: 150px;
+  }
+  .blog-title {
+    margin-bottom: 5px;
+  }
+  .blogCardTitle {
+    font-size: 1em;
+  }
+  .read-more-a {
+    font-size: 0.8em;
   }
 }

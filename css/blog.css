@@ -79,15 +79,36 @@ button:hover {
   justify-content: center;
 }
 
-/* media queries */
+/* write media queries for screen sizes 1440px, 1091px, 768px, 500px */
+
+@media screen and (max-width: 1440px) {
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #body {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}
 
 @media screen and (max-width: 1091px) {
-  #blogHeader {
-    font-size: 2.5em;
+  #blogContainer {
+    width: 100%;
+    margin: 0 auto;
   }
 
   #body {
-    font-size: 1.5em;
+    width: 100%;
+  }
+
+  #blogHeader {
+    letter-spacing: 15px;
   }
 
   #author,
@@ -95,45 +116,111 @@ button:hover {
     font-size: 1em;
   }
 
-  #blogContainer div {
-    font-size: 0.5em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #blogHeader {
-    font-size: 2em;
-  }
-
   #body {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  #blogContainer div {
+    width: 100%;
+  }
+
+  #blogContainer div.visible {
+    width: 100%;
+  }
+
+  .visible img {
+    width: 50%;
+  }
+
+  .visible {
+    display: flex;
+    justify-content: center;
+  }
+
+  #author #updated .postedBy {
+    display: flex;
+    justify-content: space-between;
   }
 
   #author,
   #updated {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
-  #blogContainer div {
-    font-size: 0.4em;
+  #body {
+    font-size: 1.1em;
+    line-height: 1.7em;
   }
 }
 
-@media screen and (max-width: 500px) {
+/* write media queries for screen sizes 768px, 425px, 375px, 320px */
+
+@media screen and (max-width: 800px) {
+  #blogContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #body {
+    width: 100%;
+  }
+
   #blogHeader {
+    letter-spacing: 15px;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #body {
     font-size: 1.5em;
+    line-height: 1.7em;
+  }
+
+  #body p {
+    margin-bottom: 40px;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  #blogContainer div {
+    width: 100%;
+  }
+
+  #blogContainer div.visible {
+    width: 100%;
+  }
+
+  .visible img {
+    width: 50%;
+  }
+
+  .visible {
+    display: flex;
+    justify-content: center;
+  }
+
+  #author #updated .postedBy {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
   }
 
   #body {
     font-size: 1em;
-  }
-
-  #author,
-  #updated {
-    font-size: 0.6em;
-  }
-
-  #blogContainer div {
-    font-size: 0.3em;
+    line-height: 1.5em;
   }
 }

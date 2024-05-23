@@ -59,3 +59,35 @@ button {
 button:hover {
   background-color: #0c2fe6;
 }
+
+/* write media queries for screen sizes 546px, 375px, 320px */
+
+@media screen and (max-width: 546px) {
+  form {
+    width: 50%;
+  }
+
+  label {
+    font-size: 3.2vw;
+  }
+
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    padding: 5px;
+    height: 40px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+
+  main {
+    height: 80vh;
+    width: 100%;
+  }
+
+  .loginHeader {
+    padding: 20px 0;
+  }
+}
