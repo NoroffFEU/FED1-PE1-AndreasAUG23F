@@ -36,7 +36,7 @@ const blogCarousel = (blogs) => {
     button.classList.add("carouselCta");
     button.textContent = "Read More";
     button.onclick = () => {
-      window.location.href = `./post/index.html?` + blog.id;
+      window.location.href = `../post/index.html?` + blog.id;
     };
 
     container.appendChild(blogContainer);
