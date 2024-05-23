@@ -77,7 +77,7 @@ const blogGrid = (blogs) => {
     button.classList.add("read-more-a");
 
     button.addEventListener("click", () => {
-      window.location.href = `/post/index.html?` + blog.id;
+      window.location.href = `../post/index.html?` + blog.id;
     });
 
     buttonContainer.appendChild(button);
