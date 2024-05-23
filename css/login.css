@@ -1,6 +1,6 @@
-@import url("./css/header.css");
-@import url("./css/footer.css");
-@import url("./css/styles.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("styles.css");
 
 main {
   background-image: url("/images/login.png");
