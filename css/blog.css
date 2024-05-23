@@ -1,6 +1,6 @@
-@import url("./css/header.css");
-@import url("./css/footer.css");
-@import url("./css/styles.css");
+@import url("css/header.css");
+@import url("css/footer.css");
+@import url("css/styles.css");
 
 #body p {
   margin-bottom: 60px; /* Legger til litt mellomrom mellom avsnittene */
