@@ -51,6 +51,7 @@ const makePage = async () => {
 
   let imageBanner = document.getElementById("imageBanner");
   imageBanner.src = blog.media.url;
+  imageBanner.alt = blog.media.alt;
 
   let content = document.getElementById("body");
   content.innerHTML = blog.body;
