@@ -65,3 +65,23 @@ button:hover {
     padding: 5px 10px;
   }
 }
+
+media screen and (max-width: 500px) {
+  main {
+    max-width: 400px;
+  }
+
+  form {
+    padding: 5px;
+  }
+
+  input[type="url"],
+  input[type="text"],
+  textarea {
+    padding: 5px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+}
