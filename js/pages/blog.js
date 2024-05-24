@@ -1,5 +1,5 @@
 import { doFetch } from "../components/fetch.mjs";
-import { handleLoginHeader } from "../components/header.mjs";
+import { handleLoginHeaderAndFooter } from "../components/header.mjs";
 
 const months = [
   "January",
@@ -18,7 +18,7 @@ const months = [
 
 const runPage = async () => {
   makePage();
-  handleLoginHeader();
+  handleLoginHeaderAndFooter();
 };
 
 const makePage = async () => {

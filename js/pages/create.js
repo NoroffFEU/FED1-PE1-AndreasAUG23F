@@ -1,6 +1,6 @@
 import { doFetch } from "../components/fetch.mjs";
-import { handleLoginHeader } from "../components/header.mjs";
-handleLoginHeader();
+import { handleLoginHeaderAndFooter } from "../components/header.mjs";
+handleLoginHeaderAndFooter();
 
 let form = document.getElementById("blogForm");
 form.addEventListener("submit", async (event) => {

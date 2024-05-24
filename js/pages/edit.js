@@ -1,8 +1,8 @@
 import { doFetch } from "../components/fetch.mjs";
-import { handleLoginHeader } from "../components/header.mjs";
+import { handleLoginHeaderAndFooter } from "../components/header.mjs";
 
 const runPage = async () => {
-  handleLoginHeader();
+  handleLoginHeaderAndFooter();
   const id = window.location.search.slice(1);
 
   const blog = await doFetch(

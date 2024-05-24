@@ -1,6 +1,6 @@
 import { carouselFunction } from "../components/carousel.mjs";
 import { doFetch } from "../components/fetch.mjs";
-import { handleLoginHeader } from "../components/header.mjs";
+import { handleLoginHeaderAndFooter } from "../components/header.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const blogs = await doFetch(
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log("blogsInfo", blogs);
   blogGrid(blogs);
   blogCarousel(blogs);
-  handleLoginHeader();
+  handleLoginHeaderAndFooter();
 });
 
 const blogCarousel = (blogs) => {
