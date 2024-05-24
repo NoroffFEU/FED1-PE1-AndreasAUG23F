@@ -11,7 +11,7 @@ form.addEventListener("submit", async (event) => {
     body: formData.get("text"),
     media: {
       url: formData.get("image"),
-      alt: "image",
+      alt: "image for blog-post: " + formData.get("title"),
     },
   };
   console.log("postData:", postData);
