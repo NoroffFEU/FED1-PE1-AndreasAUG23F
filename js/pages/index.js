@@ -62,6 +62,10 @@ const blogGrid = (blogs) => {
     image.src = blog.media.url;
     image.alt = blog.media.alt;
 
+    image.addEventListener("click", () => {
+      window.location.href = `./post/index.html?` + blog.id;
+    });
+
     let titleContainer = document.createElement("div");
     titleContainer.classList.add("blog-title");
 
