@@ -158,8 +158,6 @@ button:hover {
   }
 }
 
-/* write media queries for screen sizes 768px, 425px, 375px, 320px */
-
 @media screen and (max-width: 800px) {
   #blogContainer {
     width: 100%;
@@ -222,5 +220,97 @@ button:hover {
   #body {
     font-size: 1em;
     line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #blogContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #body {
+    width: 100%;
+  }
+
+  #blogHeader {
+    letter-spacing: 15px;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #body {
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+
+  #body p {
+    margin-bottom: 40px;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  #blogContainer div {
+    width: 100%;
+  }
+
+  #blogContainer div.visible {
+    width: 100%;
+  }
+
+  .visible img {
+    width: 50%;
+  }
+
+  .visible {
+    display: flex;
+    justify-content: center;
+  }
+
+  #author #updated .postedBy {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #body {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  /* make image a banner on top of page*/
+
+  #blogContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #body {
+    width: 100%;
+  }
+
+  #blogHeader {
+    letter-spacing: 0px;
+  }
+
+  #author,
+  #updated {
+    font-size: 1em;
+  }
+
+  #body {
+    font-size: 0.5em;
+    line-height: 1.7em;
   }
 }
