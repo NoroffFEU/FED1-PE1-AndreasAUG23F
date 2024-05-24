@@ -29,6 +29,11 @@ li {
   font-weight: bolder;
 }
 
+.header-a,
+.footer-a {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 500px) {
   .footer-img img {
     width: 400px;
