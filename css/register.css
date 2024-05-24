@@ -3,7 +3,7 @@
 @import url("styles.css");
 
 main {
-  background-image: url("/images/register.png");
+  background-image: url("../images/register.png");
   background-size: cover;
   background-position: center;
   height: 80vh;
