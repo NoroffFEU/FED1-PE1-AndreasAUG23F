@@ -62,7 +62,7 @@ export function handleLoginHeaderAndFooter() {
       loginElement.addEventListener("click", () => {
         localStorage.removeItem("userInfo");
         if (isFrontPage) {
-          window.location.href = "index.html";
+          window.location.href = "../index.html";
         } else {
           window.location.href = "../index.html";
         }
