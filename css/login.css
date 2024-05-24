@@ -60,8 +60,6 @@ button:hover {
   background-color: #0c2fe6;
 }
 
-/* write media queries for screen sizes 546px, 375px, 320px */
-
 @media screen and (max-width: 546px) {
   form {
     width: 50%;

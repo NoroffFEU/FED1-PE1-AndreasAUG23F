@@ -25,6 +25,3 @@ loginForm.addEventListener("submit", async (event) => {
   localStorage.setItem("userInfo", JSON.stringify(response));
   window.location.href = "../index.html";
 });
-
-/* email: Swagdaddy@stud.noroff.no
-password: Swagdaddy */

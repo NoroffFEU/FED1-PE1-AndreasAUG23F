@@ -34,11 +34,6 @@
   font-weight: bolder;
 }
 
-/* Hamburgermeny */
-/* */
-
-/*media queries for screen sizes 1440px, 1091px, 768px, 425px, 375px, 320px*/
-
 @media screen and (max-width: 1440px) {
   .navbar {
     gap: 100px;
