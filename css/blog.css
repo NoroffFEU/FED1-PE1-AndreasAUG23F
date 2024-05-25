@@ -134,6 +134,7 @@ button:hover {
 
   .visible img {
     width: 50%;
+    object-fit: cover;
   }
 
   .visible {
