@@ -1,12 +1,12 @@
-# FED1 Project Exam 1
+# #FED1 Project Exam 1
 
-##Project Title
+# #Project Title
   Peaks & Powder
 
-##Project Description
+# #Project Description
   Peaks & Powder is a blog website created for my exam in the Front-End Development program at Noroff during the spring of 2024. The site is designed for a fictional blogger who posts about skiing adventures around the world. This project was an exciting opportunity to apply my     HTML, CSS, and JavaScript skills, focusing on creating a visually appealing, interactive, and engaging blog layout.
 
-##Project Details
+# #Project Details
   The Peaks & Powder project aims to provide an immersive and enjoyable reading experience for ski enthusiasts. Key features and objectives include:
 
     Responsive Design: Ensuring the blog is fully responsive and looks great on all devices, including desktops, tablets, and smartphones.
@@ -16,7 +16,7 @@
     Image Carousel: Adding an image carousel on the index page that showcases the three most recent posts, providing a visual summary and enticing users to explore more content.
     Attractive Layout: Designing a clean and modern layout that enhances the overall user experience and keeps readers engaged.
     
-##Getting Started
+# #Getting Started
     Installing
       To get started with the Peaks & Powder project, follow these steps:
 
@@ -30,7 +30,7 @@
     To run the app, use the following command:
       npm run start
 
-##Contributing
+# #Contributing
   Contributions are welcome! If you would like to contribute to the Peaks & Powder project, please follow these guidelines:
 
     Fork the repository and create your branch from main.
@@ -38,7 +38,7 @@
     Ensure the code is properly formatted and adheres to the project's coding standards.
     Open a pull request to the main branch for review.
 
-##Contact
+# #Contact
   Feel free to reach out to me through the following social links:
 
       Mail: abrahamsen.andreas@gmail.com
